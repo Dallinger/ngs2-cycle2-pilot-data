@@ -8,7 +8,6 @@ import numpy as np
 
 import dallinger
 
-data = dallinger.data.load("85da95bb-a015-6176-8ee4-5935fc98fbcb")
 # b2c86911-a372-2bc2-eb6f-1179ced58e9d
 # d8f46512-efcb-6f3f-969c-84a6351621b0
 
@@ -68,17 +67,6 @@ def timecourse_player_positions(data):
 
     return (times, positions_x, positions_y)
 
-
-# Plot players positions over time.
-(times, positions_x, positions_y) = timecourse_player_positions(data)
-print(times)
-print(positions_x)
-print(positions_y)
-plt.xlim([0, 48])
-plt.ylim([0, 48])
-for i in range(positions_x.shape[1]):
-    plt.plot(positions_x[:, i], positions_y[:, i], alpha=0.50)
-plt.show()
 
 # Subplots of player positions over time:
 # (times, positions_x, positions_y) = timecourse_player_positions(data)
