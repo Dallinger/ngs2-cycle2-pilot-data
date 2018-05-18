@@ -5,4 +5,4 @@ odo==0.5.0
 pandas==0.20.3
 tablib==0.12.1
 -e git+https://github.com/Dallinger/Dallinger.git@stories/298-scrubbing-backwards#egg=dallinger[data]
--e git+https://github.com/Dallinger/Griduniverse.git@stories/298-scrubbing-back-and-forth#egg=griduniverse
+-e git+https://github.com/Dallinger/Griduniverse.git@stories/298-scrubbing-back-and-forth3#egg=griduniverse
