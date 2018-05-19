@@ -1,0 +1,4 @@
+postgres createuser -ds ubuntu
+createdb dallinger
+sed /etc/postgresql/9.5/main/pg_hba.conf -e 's/md5/trust/g' --in-place
+service postgresql reload
