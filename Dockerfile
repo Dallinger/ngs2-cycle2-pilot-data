@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get upgrade -yq
-RUN apt-get install -yq apt-utils apt-transport-https tzdata sudo curl python-pip python-dev git
+RUN apt-get install -yq apt-utils apt-transport-https tzdata sudo curl python3-pip python3-dev git
 # XXX check timezone - by default set to UTC
 #RUN  ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 #RUN  cat /etc/timezone
@@ -35,9 +35,9 @@ RUN sed /etc/postgresql/10/main/pg_hba.conf -e 's/md5/trust/g' --in-place
 # Redis
 RUN apt-get -yq install redis-server
 
-RUN sudo pip install matplotlib==2.1.0
-RUN sudo pip install -e git+https://github.com/Dallinger/Dallinger.git@stories/298-scrubbing-backwards#egg=dallinger[data,jupyter]
-RUN sudo pip install -e git+https://github.com/Dallinger/Griduniverse.git@stories/298-scrubbing-back-and-forth#egg=dlgr-griduniverse
+RUN sudo pip3 install matplotlib==2.1.0
+RUN sudo pip3 install -e git+https://github.com/Dallinger/Dallinger.git@stories/298-scrubbing-backwards#egg=dallinger[data,jupyter]
+RUN sudo pip3 install -e git+https://github.com/Dallinger/Griduniverse.git@stories/298-scrubbing-back-and-forth#egg=dlgr-griduniverse
 
 # My binder specifics as per:
 # https://mybinder.readthedocs.io/en/latest/dockerfile.html#preparing-your-dockerfile
