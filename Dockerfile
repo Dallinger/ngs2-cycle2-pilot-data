@@ -3,6 +3,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get upgrade -yq
 RUN apt-get install -yq apt-utils apt-transport-https tzdata sudo curl python3-pip python3-dev git
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 # XXX check timezone - by default set to UTC
 #RUN  ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 #RUN  cat /etc/timezone
