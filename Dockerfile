@@ -29,23 +29,11 @@ USER root
 RUN echo "host    all             all              0.0.0.0/0              trust" >> /etc/postgresql/10/main/pg_hba.conf
 # And add ``listen_addresses`` to ``/etc/postgresql/10/main/postgresql.conf``
 RUN echo "listen_addresses='*'" >> /etc/postgresql/10/main/postgresql.conf
-# Expose the PostgreSQL port
-#EXPOSE 5432
-# Add VOLUMEs to allow backup of config, logs and databases
-#VOLUME  ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]
 #=========================================================================================
-#RUN cat /etc/postgresql/10/main/postgresql.conf
 RUN sed /etc/postgresql/10/main/pg_hba.conf -e 's/md5/trust/g' --in-place
-#RUN cat /etc/postgresql/10/main/pg_hba.conf
-#RUN /etc/init.d/postgresql restart && ps waxuf
-#RUN ps waxuf
-#RUN sudo systemctl enable postgresql
-#RUN sudo update-rc.d postgresql enable && ps waxuf
-#RUN ps waxuf
 
 # Redis
 RUN apt-get -yq install redis-server
-RUN sudo service redis-server start
 
 RUN sudo pip install matplotlib==2.1.0
 RUN sudo pip install -e git+https://github.com/Dallinger/Dallinger.git@stories/298-scrubbing-backwards#egg=dallinger[data,jupyter]
