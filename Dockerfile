@@ -32,8 +32,8 @@ RUN sed /etc/postgresql/10/main/pg_hba.conf -e 's/md5/trust/g' --in-place
 RUN apt-get -yq install redis-server
 
 RUN sudo pip3 install matplotlib==2.1.0
-RUN sudo pip3 install -e git+https://github.com/Dallinger/Dallinger.git@stories/298-scrubbing-backwards#egg=dallinger[data,jupyter]
-RUN sudo pip3 install -e git+https://github.com/Dallinger/Griduniverse.git@stories/298-scrubbing-back-and-forth#egg=dlgr-griduniverse
+RUN sudo pip3 install -e git+https://github.com/Dallinger/Dallinger.git@stories/342-realtime-playback#egg=dallinger[data,jupyter]
+RUN sudo pip3 install -e git+https://github.com/Dallinger/Griduniverse.git@stories/342-realtime-playback#egg=dlgr-griduniverse
 
 # My binder specifics as per:
 # https://mybinder.readthedocs.io/en/latest/dockerfile.html#preparing-your-dockerfile
