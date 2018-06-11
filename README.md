@@ -1,3 +1,7 @@
 # NGS2 Cycle 2 pilot data
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Dallinger/ngs2-cycle2-pilot-data/master?filepath=analyses.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Dallinger/ngs2-cycle2-pilot-data/stories%2F341-bot-data?filepath=analyses.ipynb)
+
+# Bot Run Data
+
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Dallinger/ngs2-cycle2-pilot-data/stories%2F341-bot-data?filepath=bot_runs%2Fbot_collector.ipynb)

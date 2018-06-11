@@ -1,0 +1,29 @@
+[Experiment Configuration]
+mode = sandbox
+auto_recruit = true
+network = FullyConnected
+time_per_round = 600
+max_participants = 9
+walls_density = 0.50
+walls_contiguity = 0.90
+rows = 49
+columns = 49
+window_rows = 25
+window_columns = 25
+use_identicons = true
+visibility = 7
+spatial_chat = true
+show_chatroom = true
+chat_visibility_threshold = 0.3
+
+[Database Parameters]
+database_size = standard-0
+
+[Server Parameters]
+dyno_type = performance-m
+num_dynos_web = 1
+num_dynos_worker = 2
+host = 0.0.0.0
+notification_url = None
+clock_on = true
+logfile = -
